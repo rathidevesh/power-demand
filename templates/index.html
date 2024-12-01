@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Demand Prediction</title>
+</head>
+<body>
+    <h1>Power Demand Prediction</h1>
+    
+    <h2>Manual Input</h2>
+    <form action="/predict_manual" method="POST">
+        <label for="tempmax">Max Temperature:</label>
+        <input type="number" name="tempmax" required><br>
+        
+        <label for="tempmin">Min Temperature:</label>
+        <input type="number" name="tempmin" required><br>
+        
+        <label for="feelslikemax">Feels Like Max Temperature:</label>
+        <input type="number" name="feelslikemax" required><br>
+        
+        <label for="feelslikemin">Feels Like Min Temperature:</label>
+        <input type="number" name="feelslikemin" required><br>
+        
+        <label for="humidity">Humidity:</label>
+        <input type="number" name="humidity" required><br>
+        
+        <label for="windspeed">Windspeed:</label>
+        <input type="number" name="windspeed" required><br>
+
+        <label for="temp">Temprature:</label>
+        <input type="number" name="temp" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>Upload CSV File</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose CSV file:</label>
+        <input type="file" name="file" id="file" required><br>
+        <button type="submit">Upload and Predict</button>
+    </form>
+</body>
+</html>
